@@ -3,58 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mi Página Web Profesional</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .servicio {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .servicio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .foto-perfil {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            margin: 1rem auto;
+            display: block;
+        }
+        
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+        
+        .precio {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 1rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #7f8c8d;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .contacto-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contacto-item {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>¡Bienvenido a mi Página!</h1>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <img src="images/foto-perfil.jpg" alt="Mi foto de perfil" class="foto-perfil">
+        <h1>¡Bienvenido a Mi Página Web Profesional!</h1>
+        <p>Especialista en [Tu Profesión] | Creando soluciones innovadoras</p>
     </header>
+    
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Esta es mi primera página web alojada en GitHub Pages.</p>
-        </section>
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>Bienvenido a mi espacio profesional. Ofrezco servicios de alta calidad adaptados a tus necesidades específicas.</p>
+        <p>Con años de experiencia y dedicación, garantizo resultados excepcionales para cada proyecto.</p>
+    </section>
 
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>Aquí puedes escribir sobre ti, tus intereses o tu proyecto.</p>
-        </section><section id="servicios">
-    <h2>Mis Servicios</h2>
-    <div class="servicios-container">
-        <div class="servicio">
-            <img src="images/icono-servicio1.jpg" alt="Servicio 1">
-            <h3>Nombre del Servicio 1</h3>
-            <p>Descripción detallada del servicio que ofreces.</p>
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <div style="flex: 1;">
+                <img src="images/sobre-mi.jpg" alt="Sobre mí" style="width: 100%; border-radius: 10px;">
+            </div>
+            <div style="flex: 2;">
+                <h3>Mi Experiencia</h3>
+                <p>Soy un profesional apasionado por [tu campo] con [X] años de experiencia. Me especializo en crear soluciones personalizadas que superan las expectativas de mis clientes.</p>
+                <h3>Mi Filosofía</h3>
+                <p>Creo en la calidad, la atención al detalle y la comunicación constante con mis clientes para asegurar que cada proyecto sea un éxito.</p>
+            </div>
         </div>
-        <div class="servicio">
-            <img src="images/icono-servicio2.jpg" alt="Servicio 2">
-            <h3>Nombre del Servicio 2</h3>
-            <p>Descripción detallada del servicio que ofreces.</p>
-        </div>
-        <div class="servicio">
-            <img src="images/icono-servicio3.jpg" alt="Servicio 3">
-            <h3>Nombre del Servicio 3</h3>
-            <p>Descripción detallada del servicio que ofreces.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme en: email@ejemplo.com</p>
-        </section>
-    </main>
+    <section id="servicios">
+        <h2>Mis Servicios</h2>
+        <p>Ofrezco una gama completa de servicios profesionales adaptados a tus necesidades:</p>
+        
+        <div class="servicios-grid">
+            <div class="servicio">
+                <h3>Servicio 1</h3>
+                <p>Descripción detallada del primer servicio que ofreces. Explica los beneficios y características principales.</p>
+                <div class="precio">Desde $XXX</div>
+            </div>
+            
+            <div class="servicio">
+                <h3>Servicio 2</h3>
+                <p>Descripción detallada del segundo servicio. Incluye información sobre el proceso y resultados esperados.</p>
+                <div class="precio">Desde $XXX</div>
+            </div>
+            
+            <div class="servicio">
+                <h3>Servicio 3</h3>
+                <p>Descripción del tercer servicio. Destaca qué te hace diferente y por qué elegirte.</p>
+                <div class="precio">Desde $XXX</div>
+            </div>
+            
+            <div class="servicio">
+                <h3>Servicio 4</h3>
+                <p>Descripción del cuarto servicio. Menciona cualquier certificación o especialización.</p>
+                <div class="precio">Desde $XXX</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Trabajos</h2>
+        <p>Algunos ejemplos de mis proyectos anteriores:</p>
+        
+        <div class="galeria">
+            <img src="images/proyecto1.jpg" alt="Proyecto 1">
+            <img src="images/proyecto2.jpg" alt="Proyecto 2">
+            <img src="images/proyecto3.jpg" alt="Proyecto 3">
+            <img src="images/proyecto4.jpg" alt="Proyecto 4">
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Interesado en mis servicios? ¡No dudes en contactarme!</p>
+        
+        <div class="contacto-info">
+            <div class="contacto-item">
+                <h3>📧 Email</h3>
+                <p>tu-email@ejemplo.com</p>
+            </div>
+            
+            <div class="contacto-item">
+                <h3>📞 Teléfono</h3>
+                <p>+34 123 456 789</p>
+            </div>
+            
+            <div class="contacto-item">
+                <h3>📍 Ubicación</h3>
+                <p>Tu ciudad, País</p>
+            </div>
+            
+            <div class="contacto-item">
+                <h3>🕒 Horario</h3>
+                <p>Lunes - Viernes: 9:00 - 18:00</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Mi Página Web</p>
+        <p>&copy; 2024 Mi Página Web Profesional - Creada con GitHub Pages</p>
+        <p>Sígueme en redes sociales: [Enlaces a tus redes]</p>
     </footer>
 </body>
 </html>
-<img src="images/nombre-de-tu-imagen.jpg" alt="Descripción de la imagen" width="600">
